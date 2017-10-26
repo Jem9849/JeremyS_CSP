@@ -2,6 +2,7 @@ bin/
 .DS_Store
 *.class
 Thumbs.db
+xuserdata
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
