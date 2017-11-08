@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="TimesNewRoman.ttf">
-            <string>TimesNewRomanPSMT</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -46,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="-1630" y="-522"/>
         </scene>
-        <!--Creativity Controller-->
+        <!--Creativity View Controller-->
         <scene sceneID="jQn-uw-VTw">
             <objects>
-                <viewController id="g63-cr-GWy" customClass="CreativityController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g63-cr-GWy" customClass="CreativityViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nk1-Yp-d8C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="-794" y="-522"/>
         </scene>
-        <!--Abstraction Controller-->
+        <!--Abstraction View Controller-->
         <scene sceneID="bfy-dd-pAm">
             <objects>
-                <viewController id="vVU-Wd-zmz" customClass="AbstractionController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vVU-Wd-zmz" customClass="AbstractionViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Knx-ag-xVY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="118" y="-522"/>
         </scene>
-        <!--Data And Info Controller-->
+        <!--Data View Controller-->
         <scene sceneID="qWi-nw-USU">
             <objects>
-                <viewController id="wIo-LY-vCb" customClass="DataAndInfoController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wIo-LY-vCb" customClass="DataViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mSL-I4-hVP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,11 +98,16 @@
                                 <rect key="frame" x="55" y="212" width="284" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Algorithm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7v-U1-yHW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7v-U1-yHW">
                                 <rect key="frame" x="16" y="20" width="312" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Algorithm">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="TimesNewRomanPSMT"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="1821.5999999999999" y="-522.18890554722645"/>
         </scene>
-        <!--Programming Controller-->
+        <!--Programming View Controller-->
         <scene sceneID="Kbf-dL-Nub">
             <objects>
-                <viewController id="Z0t-vJ-u25" customClass="ProgrammingController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z0t-vJ-u25" customClass="ProgrammingViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yil-oM-686">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="2655" y="-522"/>
         </scene>
-        <!--Internet Controller-->
+        <!--Internet View Controller-->
         <scene sceneID="u3H-mM-EPv">
             <objects>
-                <viewController id="nPn-Kn-Bai" customClass="InternetController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nPn-Kn-Bai" customClass="InternetViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ckO-js-SLI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="3532" y="-522"/>
         </scene>
-        <!--Impact Globe Controller-->
+        <!--Global Impact View Controller-->
         <scene sceneID="awP-5e-ESt">
             <objects>
-                <viewController id="zdK-pT-FSe" customClass="ImpactGlobeController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zdK-pT-FSe" customClass="GlobalImpactViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KVK-WV-32g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
