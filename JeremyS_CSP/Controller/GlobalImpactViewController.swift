@@ -9,9 +9,16 @@
 import UIKit
 
 public class GlobalImpactViewController: UIViewController {
+    
+    @IBOutlet weak var imageImpact: UIImageView!
+    
+    private func setupGlobalImpact() -> Void {
+        
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        setupGlobalImpact()
 
         // Do any additional setup after loading the view.
     }
