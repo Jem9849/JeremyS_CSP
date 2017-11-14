@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 public class GlobalImpactViewController: UIViewController {
     
@@ -14,11 +15,24 @@ public class GlobalImpactViewController: UIViewController {
     @IBOutlet weak var imageImpactRelated: UIImageView!
     @IBOutlet weak var whyLabel: UILabel!
     @IBOutlet weak var personalConnection: UILabel!
+    @IBOutlet weak var mapRights: MKMapView!
     
     
     private func setupGlobalImpact() -> Void {
         imageImpact.image = UIImage (named: "ok")
         imageImpactRelated.image = UIImage (named:"right")
+        let latitude: CLLocationDegrees = 32.054379
+        let longitude: CLLocationDegrees = 41.189285
+        let latDelta: CLLocationDegrees = 0.0
+        let longDelta: CLLocationDegrees = 0.0
+        
+        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        let span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        mapRights.setRegion(region, animated: true)
         
         whyLabel.text =  ("The reason this global problem needs to be addressed is because human rights have been violated for a long time. Throughout history we have underestimated others and we have kept them as slaves, and if not slaves, as those who could not handle what we could do. It has been a while and a lot of the world has progressed, but a lot of parts in the world have not. It is important because it has been forever. We must help minimize it completely. ")
         
