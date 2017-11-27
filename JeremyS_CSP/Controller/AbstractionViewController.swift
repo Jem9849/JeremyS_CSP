@@ -24,10 +24,10 @@ public class AbstractionViewController: AbstractionViewController: UIPageViewCon
     
     //Helper method to retrieve the correct ViewController
     private func newAbstractionViewController(astractionLevel : String) -> UIViewController {
-        
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(abstractionLevel)ViewController")
     }
     
-    public override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
