@@ -44,7 +44,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
     
     //MARK: - Required Protocol methods for UIPageViewControllerDatasource
     
-    public func pageViewController(_pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
         guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
         else
@@ -68,7 +68,7 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
         
         return orderedAbstractionViews[previousIndex]
     }
-    public func pageViewController(_pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
         guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
         else
@@ -91,6 +91,23 @@ public class AbstractionViewController: UIPageViewController, UIPageViewControll
         }
         
         return orderedAbstractionViews[nextIndex]
+    }
+    
+    //MARK:- Support for dots he UIPageViewController
+    
+    public func presentationCount(for pageViewController: UIPageViewController) -> Int
+    {
+        return orderedAbstractionViews.count
+    }
+    
+    public func presentationIndex(for pageViewController: UIPageViewController) -> Int
+    {
+        guard let firstViewController = viewControllers?.first, let firstViewControllerIndex = orderedAbstractionViews.index(of: firstViewController)
+        else
+        {
+            return 0
+        }
+        return firstViewControllerIndex
     }
 
     public override func didReceiveMemoryWarning() {
