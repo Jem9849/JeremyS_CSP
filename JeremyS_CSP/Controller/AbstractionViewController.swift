@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AbstractionViewController: AbstractionViewController: UIPageViewController, UIPageViewControllerDataSource {
+public class AbstractionViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     //MARK: Array of subviews
     private (set) lazy var orderedAbstractionViews : [UIViewController] =
@@ -19,7 +19,7 @@ public class AbstractionViewController: AbstractionViewController: UIPageViewCon
             self.newAbstractionViewController(abstractionLevel: "ByteCode"),
             self.newAbstractionViewController(abstractionLevel: "Binary"),
             self.newAbstractionViewController(abstractionLevel: "AndGate"),
-            ]
+        ]
     }()
     
     //Helper method to retrieve the correct ViewController
@@ -27,10 +27,46 @@ public class AbstractionViewController: AbstractionViewController: UIPageViewCon
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(abstractionLevel)ViewController")
     }
     
-    override public func viewDidLoad() {
+    override public func viewDidLoad()
+    {
         super.viewDidLoad()
+        dataSource = self
+        
+        if let firstViewController = orderedAbstractionViews.first
+        {
+            setViewControllers([firstViewController],
+                               direction: .foward,
+                               animated: true,
+                               completion: nil)
+        }
 
-        // Do any additional setup after loading the view.
+    }
+    
+    //MARK: - Required Protocol methods for UIPageViewControllerDatasource
+    
+    public func pageViewController(_pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
+    {
+        guard let viewControllerIndex = orderedAbstractionViews.index(of: viewController)
+        else
+        {
+            return nil
+        }
+        
+        let previousIndex = viewControllerIndex - 1
+        
+        guard previousIndex >= 0
+        else
+        {
+            return orderedAbsactionViews.last
+        }
+        
+        guard orderedAbstractionViews.count > previousIndex
+        else
+        {
+            return nil
+        }
+        
+        return orderedAbstractionViews[previousIndex]
     }
 
     public override func didReceiveMemoryWarning() {
