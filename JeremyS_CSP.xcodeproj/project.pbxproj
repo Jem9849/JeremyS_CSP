@@ -22,7 +22,7 @@
 		A6F5E96A1FA25AEA0075D783 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E9691FA25AEA0075D783 /* DataViewController.swift */; };
 		A6F5E96C1FA25B0D0075D783 /* AlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E96B1FA25B0D0075D783 /* AlgorithmsViewController.swift */; };
 		A6F5E96E1FA25B2A0075D783 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E96D1FA25B2A0075D783 /* ProgrammingViewController.swift */; };
-		A6F5E9701FA25B570075D783 /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E96F1FA25B570075D783 /* InternetViewController.swift */; };
+		A6F5E9701FA25B570075D783 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E96F1FA25B570075D783 /* InternetMasterViewController.swift */; };
 		A6F5E9721FA25B7D0075D783 /* GlobalImpactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E9711FA25B7D0075D783 /* GlobalImpactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +65,7 @@
 		A6F5E9691FA25AEA0075D783 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		A6F5E96B1FA25B0D0075D783 /* AlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsViewController.swift; sourceTree = "<group>"; };
 		A6F5E96D1FA25B2A0075D783 /* ProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingViewController.swift; sourceTree = "<group>"; };
-		A6F5E96F1FA25B570075D783 /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		A6F5E96F1FA25B570075D783 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
 		A6F5E9711FA25B7D0075D783 /* GlobalImpactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImpactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +153,7 @@
 				A6F5E9691FA25AEA0075D783 /* DataViewController.swift */,
 				A6F5E96B1FA25B0D0075D783 /* AlgorithmsViewController.swift */,
 				A6F5E96D1FA25B2A0075D783 /* ProgrammingViewController.swift */,
-				A6F5E96F1FA25B570075D783 /* InternetViewController.swift */,
+				A6F5E96F1FA25B570075D783 /* InternetMasterViewController.swift */,
 				A6F5E9711FA25B7D0075D783 /* GlobalImpactViewController.swift */,
 			);
 			path = Controller;
@@ -321,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6F5E9701FA25B570075D783 /* InternetViewController.swift in Sources */,
+				A6F5E9701FA25B570075D783 /* InternetMasterViewController.swift in Sources */,
 				A6F5E96A1FA25AEA0075D783 /* DataViewController.swift in Sources */,
 				A6F5E96E1FA25B2A0075D783 /* ProgrammingViewController.swift in Sources */,
 				A6E5A39D1FC36028000264AE /* Cat.swift in Sources */,
