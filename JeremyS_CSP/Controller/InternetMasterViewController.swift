@@ -67,6 +67,42 @@ public class InternetMasterViewController: UITableViewController {
         
         return cell
     }
+    
+    //MARK: Handle the internal transfer
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier! == "showDetail"
+        {
+            if let indexPath = self.tableView.indexPathForSelectedRow
+            {
+                let urlString = addresses[indexPath.row]
+                let pageText : String
+                
+                if indexPath.row == 0
+                {
+                    pageText = """ DNS: They maintain a directory of domain names and translate them to Internet Protocol (IP) addresses.
+                    
+                    URL: Uniform resource locator made up of the domain name and other important info.
+                    
+                    IP: Online address, used to send info over internet.
+                    
+                    TCP: Transmission Control Protocol, a set of rules that governs the delivery of data over internet and other connections using internet protocol. """
+                }
+                else
+                {
+                    pageText = internetTopics[indexPath.row]
+                }
+                
+                let controller = segue.destination as!
+                InternetDetailViewController
+                
+                controller.detailAddress = urlString
+                controller.detailText = pageText
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
+    }
 
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
