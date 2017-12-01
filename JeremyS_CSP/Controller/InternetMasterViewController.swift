@@ -80,13 +80,15 @@ public class InternetMasterViewController: UITableViewController {
                 
                 if indexPath.row == 0
                 {
-                    pageText = """ DNS: They maintain a directory of domain names and translate them to Internet Protocol (IP) addresses.
+                    pageText = """
+                    DNS: They maintain a directory of domain names and translate them to Internet Protocol (IP) addresses.
                     
                     URL: Uniform resource locator made up of the domain name and other important info.
                     
                     IP: Online address, used to send info over internet.
                     
-                    TCP: Transmission Control Protocol, a set of rules that governs the delivery of data over internet and other connections using internet protocol. """
+                    TCP: Transmission Control Protocol, a set of rules that governs the delivery of data over internet and other connections using internet protocol.
+                    """
                 }
                 else
                 {
