@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "slaiddogdeer 20 20 transparent.png",
+      "filename" : "memetree and the stick turtle.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "3x.png",
       "scale" : "3x"
     }
   ],
