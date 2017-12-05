@@ -100,7 +100,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="and" translatesAutoresizingMaskIntoConstraints="NO" id="GzH-tv-Q4n">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="andGate" translatesAutoresizingMaskIntoConstraints="NO" id="GzH-tv-Q4n">
                                 <rect key="frame" x="76" y="105" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -512,7 +512,7 @@ Cg
     <resources>
         <image name="Binary" width="387" height="348"/>
         <image name="Block code" width="850" height="458"/>
-        <image name="and" width="674" height="435"/>
+        <image name="andGate" width="226" height="147"/>
         <image name="class" width="622" height="214"/>
         <image name="java" width="421" height="333"/>
         <image name="swiftSample" width="1248" height="1244"/>
