@@ -319,7 +319,7 @@
             </objects>
             <point key="canvasLocation" x="4405.6000000000004" y="-1332.6836581709147"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Internet Samples-->
         <scene sceneID="230-Pj-L3Z">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="44l-YE-pUH" customClass="InternetMasterViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
@@ -335,6 +335,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dpJ-v0-hH3" kind="showDetail" identifier="showDetail" id="gMc-a9-KwI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -342,7 +345,7 @@
                             <outlet property="delegate" destination="44l-YE-pUH" id="NmM-gK-dUU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dSc-9V-aqv"/>
+                    <navigationItem key="navigationItem" title="Internet Samples" id="dSc-9V-aqv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMb-xS-aVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -509,4 +512,7 @@ Cg
         <image name="java" width="421" height="333"/>
         <image name="swiftSample" width="1248" height="1244"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gMc-a9-KwI"/>
+    </inferredMetricsTieBreakers>
 </document>
