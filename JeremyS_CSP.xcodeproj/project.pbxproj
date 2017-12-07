@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A664DE8B1FD9D36E00B8FDD1 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */; };
 		A6C9FED81FCF39D6009A0110 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */; };
 		A6C9FEDB1FCF3B99009A0110 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */; };
 		A6E5A39B1FC35F4F000264AE /* Fluffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E5A39A1FC35F4F000264AE /* Fluffable.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A6E5A39A1FC35F4F000264AE /* Fluffable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fluffable.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				A6F5E96F1FA25B570075D783 /* InternetMasterViewController.swift */,
 				A6F5E9711FA25B7D0075D783 /* GlobalImpactViewController.swift */,
 				A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */,
+				A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			files = (
 				A6F5E9701FA25B570075D783 /* InternetMasterViewController.swift in Sources */,
 				A6F5E96A1FA25AEA0075D783 /* DataViewController.swift in Sources */,
+				A664DE8B1FD9D36E00B8FDD1 /* ArtCell.swift in Sources */,
 				A6F5E96E1FA25B2A0075D783 /* ProgrammingViewController.swift in Sources */,
 				A6E5A39D1FC36028000264AE /* Cat.swift in Sources */,
 				A6E5A39F1FC3636A000264AE /* birb.swift in Sources */,
