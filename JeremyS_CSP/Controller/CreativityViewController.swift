@@ -119,22 +119,22 @@ public class CreativityViewController: UIViewController
         return sectionInsets.left
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    override public func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override public func collectionView(_ collectionView: UICollectionView,
+                                        shouldSelectItemAt indexPath: IndexPath) -> Bool
+    {
+        if largePhotoIndexPath == indexPath
+        {
+            largePhotoIndexPath = nil
+        }
+        else
+        {
+            largePhotoIndexPath = indexPath
+        }
+        
+        return false
     }
+    
+    
     
 
     /*
