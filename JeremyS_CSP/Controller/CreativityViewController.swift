@@ -36,7 +36,7 @@ public class CreativityViewController: UICollectionViewController, UICollectionV
     {
         didSet
         {
-            var indexPaths = [indexPath]()
+            var indexPaths = [IndexPath]()
             if let largePhotoIndexPath = largePhotoIndexPath
             {
                 indexPaths.append(largePhotoIndexPath)
@@ -55,9 +55,8 @@ public class CreativityViewController: UICollectionViewController, UICollectionV
             
                 if let largePhotoIndexPath = self.largePhotoIndexPath
                 {
-                self.collectionView?.scrollToItem(at: largePhotoIndexPath,
-                                                  at: .centeredVertically,
-                }                                 animated: true)
+                self.collectionView?.scrollToItem(at: largePhotoIndexPath, at: .centeredVertically, animated: true)
+                }
             }
        }
     }
@@ -77,7 +76,7 @@ public class CreativityViewController: UICollectionViewController, UICollectionV
         return 1
     }
     
-    override public func collectioniew(_ collectionView: UICollectionView,
+    override public func collectionView(_ collectionView: UICollectionView,
                                        numberOfItemsInSection section: Int) -> Int
     {
         return artSelection.count
