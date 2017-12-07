@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,6 +62,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-q1-Hn3">
+                                <rect key="frame" x="146" y="578" width="82" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Creativity"/>
+                                <connections>
+                                    <segue destination="GtQ-v9-dPf" kind="showDetail" id="7Mv-Ut-LwG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -71,19 +80,60 @@
             <point key="canvasLocation" x="-1631.2" y="-522.18890554722645"/>
         </scene>
         <!--Creativity View Controller-->
-        <scene sceneID="jQn-uw-VTw">
+        <scene sceneID="oB3-Bp-rlz">
             <objects>
-                <viewController id="g63-cr-GWy" customClass="CreativityViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Nk1-Yp-d8C">
+                <collectionViewController id="Lgc-tT-VT1" customClass="CreativityViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="o19-Fo-U4q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="79k-nY-GO3"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rja-ld-JI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kVX-S0-H1h">
+                            <size key="itemSize" width="250" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="artIdentifier" id="EmN-vk-qHL" customClass="ArtCell" customModule="JeremyS_CSP" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="0.0" width="250" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFs-IN-esA">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeN-BJ-Sm4">
+                                            <rect key="frame" x="0.0" y="279" width="250" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="KeN-BJ-Sm4" secondAttribute="trailing" id="6dR-FJ-Kz6"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="KeN-BJ-Sm4" secondAttribute="bottom" id="HIy-cn-J1P"/>
+                                    <constraint firstItem="KeN-BJ-Sm4" firstAttribute="leading" secondItem="EmN-vk-qHL" secondAttribute="leadingMargin" id="WY5-dg-ODD"/>
+                                    <constraint firstItem="KeN-BJ-Sm4" firstAttribute="top" secondItem="cFs-IN-esA" secondAttribute="bottom" id="wg5-jO-GJZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageName" destination="KeN-BJ-Sm4" id="Lis-A1-ztX"/>
+                                    <outlet property="imageView" destination="cFs-IN-esA" id="IOK-JZ-hxd"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Lgc-tT-VT1" id="Ar3-Zx-Znk"/>
+                            <outlet property="delegate" destination="Lgc-tT-VT1" id="8vv-eg-xqN"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="lRv-Ro-zJf"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzK-Sk-211" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="-522"/>
+            <point key="canvasLocation" x="-432.80000000000001" y="-522.18890554722645"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UxP-Og-SoN">
@@ -270,7 +320,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ECW-SE-zck" customClass="AbstractionViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTQ-7c-LZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="-532"/>
+            <point key="canvasLocation" x="456.80000000000001" y="-532.0839580209896"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="qWi-nw-USU">
@@ -285,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSs-rr-vMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-522"/>
+            <point key="canvasLocation" x="1375.2" y="-522.18890554722645"/>
         </scene>
         <!--Internet Detail View Controller-->
         <scene sceneID="ySZ-ya-nAf">
@@ -383,7 +433,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdM-Lg-iTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3492" y="-532"/>
+            <point key="canvasLocation" x="3831.1999999999998" y="-532.0839580209896"/>
         </scene>
         <!--Algorithms View Controller-->
         <scene sceneID="TUH-x9-qmt">
@@ -419,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buF-YJ-UNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1821.5999999999999" y="-522.18890554722645"/>
+            <point key="canvasLocation" x="2160.8000000000002" y="-522.18890554722645"/>
         </scene>
         <!--Programming View Controller-->
         <scene sceneID="Kbf-dL-Nub">
@@ -434,7 +484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11d-tX-7JN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2655" y="-522"/>
+            <point key="canvasLocation" x="2992.8000000000002" y="-522.18890554722645"/>
         </scene>
         <!--Global Impact View Controller-->
         <scene sceneID="awP-5e-ESt">
@@ -506,7 +556,25 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkt-c8-vDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4365.6000000000004" y="-522.18890554722645"/>
+            <point key="canvasLocation" x="4704.8000000000002" y="-522.18890554722645"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Vv-vI-O0j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GtQ-v9-dPf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bWe-rU-VIU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lgc-tT-VT1" kind="relationship" relationship="rootViewController" id="25t-NP-E4H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZw-p5-GE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433" y="155"/>
         </scene>
     </scenes>
     <resources>
