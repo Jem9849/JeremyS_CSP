@@ -87,6 +87,19 @@ public class DrawingView : UIView
         logo.close()
         logo.fill()
     }
+    
+    private func practiceDrawing() -> UIBezierPath
+    {
+        let random = UIBezierPath()
+        UIColor.yellow.setStroke()
+        random.lineWidth = 6.0
+        
+        random.move(to:CGPoint(x:80, y: 180))
+        random.addLine(to:CGPoint(x:30, y: 160))
+        random.addLine(to:CGPoint(x: 35, y: 600))
+        
+        return random
+    }
 
    // override public func viewDidLoad() {
      //   super.viewDidLoad()
