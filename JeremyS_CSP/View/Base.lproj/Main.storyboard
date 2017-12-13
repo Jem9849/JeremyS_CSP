@@ -70,6 +70,14 @@
                                     <segue destination="GtQ-v9-dPf" kind="showDetail" id="7Mv-Ut-LwG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1f-LY-e3C">
+                                <rect key="frame" x="139" y="601" width="96" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Programming"/>
+                                <connections>
+                                    <segue destination="Z0t-vJ-u25" kind="showDetail" id="KXW-j4-Bdz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -326,7 +334,7 @@
         <scene sceneID="qWi-nw-USU">
             <objects>
                 <viewController id="wIo-LY-vCb" customClass="DataViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mSL-I4-hVP">
+                    <view key="view" contentMode="scaleToFill" id="mSL-I4-hVP" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
