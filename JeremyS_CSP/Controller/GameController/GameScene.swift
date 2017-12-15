@@ -80,7 +80,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             
         }
         
-        if(changeDirection == true)
+        if(changeDirection)
         {
             self.invaderSpeed *= -1
             self.enumerateChildNodes(withName: "invader")
@@ -166,11 +166,12 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     //MARK:- SKPhysicsContactDelegate method
     
-    func didBeginContact(contact: SKPhysicsContact) -> Void
+    public func didBegin(_ contact: SKPhysicsContact) -> Void
     {
         
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
+        
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask
         {
             firstBody = contact.bodyA

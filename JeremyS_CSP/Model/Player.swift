@@ -87,7 +87,7 @@ public class Player: SKSpriteNode
         else
         {
             canFire = false
-            let bullet = PlayerLaser(imageName: "laser", bulletSound: "laser sound.mp3")
+            let bullet = PlayerLaser(imageName: "oo", bulletSound: "laser sound.mp3")
             bullet.position.x = self.position.x
             bullet.position.y = self.position.y + self.size.height/2
             scene.addChild(bullet)
