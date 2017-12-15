@@ -53,7 +53,7 @@ public class Player: SKSpriteNode
     
     private func animate() -> Void
     {
-        var playerTexture:[SKTexture] = []
+        var playerTextures:[SKTexture] = []
         for i in 1...3
         {
             playerTextures.append(SKTexture(imageNamed: "x wing\(i)"))
