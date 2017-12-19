@@ -145,6 +145,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             newGame()
         }
     }
+    
     //MARK:- Scene methods
     
     override public func didMove(to view: SKView) -> Void
