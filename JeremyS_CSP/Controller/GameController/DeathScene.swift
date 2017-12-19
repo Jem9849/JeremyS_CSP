@@ -26,7 +26,7 @@ public class DeathScene: SKScene
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) -> Void
     {
-        let touch = touches.first
+        let touch = touches.first  
         let touchLocation = touch?.location(in: self)
         let touchedNode = self.atPoint(touchLocation!)
         if(touchedNode.name == "game over")
