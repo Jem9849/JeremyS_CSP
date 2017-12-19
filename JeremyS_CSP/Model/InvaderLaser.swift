@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-public class InvaderBullet: Projectile
+public class InvaderLaser: Projectile
 {
     override init(imageName: String, bulletSound:String?)
     {
@@ -18,7 +18,7 @@ public class InvaderBullet: Projectile
         self.physicsBody = SKPhysicsBody(texture: self.texture!, size: self.size)
         self.physicsBody?.isDynamic = true
         self.physicsBody?.usesPreciseCollisionDetection = true
-        self.physicsBody?.categoryBitMask = CollisionCategories.InvaderBullet
+        self.physicsBody?.categoryBitMask = CollisionCategories.InvaderLaser
         self.physicsBody?.contactTestBitMask = CollisionCategories.Player
         self.physicsBody?.collisionBitMask = 0x0
         

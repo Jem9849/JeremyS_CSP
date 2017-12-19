@@ -10,6 +10,7 @@
 		A664DE8B1FD9D36E00B8FDD1 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */; };
 		A6C9FED81FCF39D6009A0110 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */; };
 		A6C9FEDB1FCF3B99009A0110 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */; };
+		A6CB7C131FE9A4FA005D1431 /* DeathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CB7C121FE9A4FA005D1431 /* DeathScene.swift */; };
 		A6D91E591FE1AB41003D47E9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D91E561FE1AB41003D47E9 /* GameScene.swift */; };
 		A6D91E5A1FE1AB41003D47E9 /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D91E571FE1AB41003D47E9 /* LevelCompleteScene.swift */; };
 		A6D91E5B1FE1AB41003D47E9 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D91E581FE1AB41003D47E9 /* StartScene.swift */; };
@@ -66,6 +67,7 @@
 		A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A6CB7C121FE9A4FA005D1431 /* DeathScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
 		A6D91E561FE1AB41003D47E9 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A6D91E571FE1AB41003D47E9 /* LevelCompleteScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCompleteScene.swift; sourceTree = "<group>"; };
 		A6D91E581FE1AB41003D47E9 /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				A6D91E561FE1AB41003D47E9 /* GameScene.swift */,
 				A6D91E571FE1AB41003D47E9 /* LevelCompleteScene.swift */,
 				A6D91E581FE1AB41003D47E9 /* StartScene.swift */,
+				A6CB7C121FE9A4FA005D1431 /* DeathScene.swift */,
 			);
 			path = GameController;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				A6F5E9661FA25A810075D783 /* CreativityViewController.swift in Sources */,
 				A6F5E9361FA257280075D783 /* ViewController.swift in Sources */,
 				A6E5A39B1FC35F4F000264AE /* Fluffable.swift in Sources */,
+				A6CB7C131FE9A4FA005D1431 /* DeathScene.swift in Sources */,
 				A6F5E9341FA257280075D783 /* AppDelegate.swift in Sources */,
 				A6F5E9721FA25B7D0075D783 /* GlobalImpactViewController.swift in Sources */,
 			);
