@@ -55,7 +55,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         
         
     }
-
+    
     private func setupPlayer() -> Void
     {
         //Frame or bounds
@@ -88,7 +88,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
                 node, stop in
                 let invader = node as! SKSpriteNode
                 invader.position.y -= CGFloat(10)
-            
+                
             }
             changeDirection = false
             
@@ -110,20 +110,41 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     func fireInvaderBullet() -> Void
     {
-       
+        if(invadersThatCanFire.isEmpty)
+        {
+            gameLevel += 1
+            levelComplete()
+        }
+        
+        if let randomInvader = invadersThatCanFire.randomElement()
+        {
+            randomInvader.fireBullet(scene: self)
+        }
     }
-    
     func newGame() -> Void
     {
-        
+        let newGameScene = StartScene(size: size)
+        newGameScene.scaleMode = scaleMode
+        let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
+        view?.presentScene(newGameScene, transition: transitionType)
     }
     
     func levelComplete() -> Void
     {
-        
+        if(gameLevel <= maxLevels)
+        {
+            let levelCompleteScene = LevelCompleteScene(size: size)
+            levelCompleteScene.scaleMode = scaleMode
+            let transitionType = SKTransition.flipHorizontal(withDuration: 0.5)
+            view?.presentScene(levelCompleteScene, transition: transitionType)
+        }
+    
+        else
+        {
+            gameLevel = 1
+            newGame()
+        }
     }
-    
-    
     //MARK:- Scene methods
     
     override public func didMove(to view: SKView) -> Void
@@ -141,7 +162,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         setupAccelerometer()
         
     }
-
+    
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) -> Void
     {
         player.fireBullet(scene: self)
@@ -156,7 +177,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     {
         player.physicsBody?.velocity = CGVector(dx: accelerationX * 600, dy: 0)
     }
-
+    
     //MARK:- Handle Motion
     func setupAccelerometer() -> Void
     {
@@ -165,9 +186,9 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             {
                 (accelerometerData: CMAccelerometerData?, error: Error?)
                 in
-                    let acceleration = accelerometerData!.acceleration
-                    self.accelerationX = CGFloat(acceleration.x)
-                } )
+                let acceleration = accelerometerData!.acceleration
+                self.accelerationX = CGFloat(acceleration.x)
+        } )
     }
     
     
