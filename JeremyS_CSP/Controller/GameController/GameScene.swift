@@ -183,7 +183,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             secondBody = contact.bodyA
         }
         if ((firstBody.categoryBitMask & CollisionCategories.Invader != 0) &&
-            (secondBody.categoryBitMask & CollisionCategories.PlayerBullet != 0))
+            (secondBody.categoryBitMask & CollisionCategories.PlayerLaser != 0))
         {
             print("Invader and Player Bullet Contact")
         }
