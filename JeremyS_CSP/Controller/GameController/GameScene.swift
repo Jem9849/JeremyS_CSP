@@ -160,7 +160,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         starField?.zPosition = -1000
         addChild(starField!)
         
-        backgroundColor = UIColor.cyan
+        backgroundColor = UIColor(red:0.28, green:0.23, blue:0.23, alpha:1.0)
         rightBounds = self.size.width - 30
         setupInvaders()
         setupPlayer()
