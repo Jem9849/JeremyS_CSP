@@ -380,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfH-mb-9Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4405.6000000000004" y="-1332.6836581709147"/>
+            <point key="canvasLocation" x="4706" y="-1316"/>
         </scene>
         <!--Internet Samples-->
         <scene sceneID="230-Pj-L3Z">
@@ -412,7 +412,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMb-xS-aVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3532" y="-1334"/>
+            <point key="canvasLocation" x="3833" y="-1318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dvZ-nQ-avj">
@@ -428,7 +428,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4O4-i9-e3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2654" y="-1333"/>
+            <point key="canvasLocation" x="2954" y="-1317"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="eB8-km-4JP">
@@ -594,6 +594,6 @@ Cg
         <image name="swiftSample" width="1248" height="1244"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NQV-eS-IP1"/>
+        <segue reference="gMc-a9-KwI"/>
     </inferredMetricsTieBreakers>
 </document>
