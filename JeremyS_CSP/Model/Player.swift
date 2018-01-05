@@ -14,7 +14,7 @@ public class Player: SKSpriteNode
     private var canFire : Bool = true
 
     private var invincible = false
-    private var lives:Int = 3
+    private var lives: Int = 3
     {
         didSet
         {
@@ -111,7 +111,7 @@ public class Player: SKSpriteNode
             let moveBulletAction = SKAction.move(to:CGPoint(x:self.position.x,y:scene.size.height + bullet.size.height), duration: 1.0)
             let removeBulletAction = SKAction.removeFromParent()
             bullet.run(SKAction.sequence([moveBulletAction, removeBulletAction]))
-            let waitToEnableFire = SKAction.wait(forDuration: 0.5)
+            let waitToEnableFire = SKAction.wait(forDuration: 0.0001)
             run(waitToEnableFire, completion:
                 {
           self.canFire = true

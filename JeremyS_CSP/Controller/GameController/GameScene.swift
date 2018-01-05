@@ -14,8 +14,11 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
 {
     //MARK: Invader Data
     let rowsOfInvaders : Int = 4
-    var invaderSpeed : Double = 7.5
+    var invaderSpeed : Double = 23.434365735465754546
     var invadersThatCanFire : [Invader] = []
+    var invaderCount = 0
+    
+    
     
     //MARK: Player Data
     var player : Player = Player()
@@ -33,6 +36,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     private func setupInvaders() -> Void
     {
         let numberOfInvaders = gameLevel * 2 + 1
+        invaderCount = numberOfInvaders
         for invaderRow in 0 ..< numberOfInvaders
         {
             for invaderCol in 0 ..< numberOfInvaders
@@ -110,6 +114,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     func fireInvaderBullet() -> Void
     {
+        
         if(invadersThatCanFire.isEmpty)
         {
             gameLevel += 1
@@ -120,6 +125,8 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         {
             randomInvader.fireBullet(scene: self)
         }
+        
+
     }
     func newGame() -> Void
     {
@@ -150,6 +157,9 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     override public func didMove(to view: SKView) -> Void
     {
+       
+        
+        
         self.physicsWorld.gravity = CGVector(dx:0, dy:0)
         self.physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
