@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A637641F2004051F00EDE4BC /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A637641E2004051F00EDE4BC /* DataViewController.swift */; };
+		A63764212004055000EDE4BC /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63764202004054F00EDE4BC /* BucketItemCell.swift */; };
 		A664DE8B1FD9D36E00B8FDD1 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */; };
 		A6C9FED81FCF39D6009A0110 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */; };
 		A6C9FEDB1FCF3B99009A0110 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */; };
@@ -39,7 +41,6 @@
 		A6F5E9541FA257280075D783 /* JeremyS_CSPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E9531FA257280075D783 /* JeremyS_CSPUITests.swift */; };
 		A6F5E9661FA25A810075D783 /* CreativityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E9651FA25A810075D783 /* CreativityViewController.swift */; };
 		A6F5E9681FA25AB30075D783 /* AbstractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E9671FA25AB30075D783 /* AbstractionViewController.swift */; };
-		A6F5E96A1FA25AEA0075D783 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E9691FA25AEA0075D783 /* DataViewController.swift */; };
 		A6F5E96C1FA25B0D0075D783 /* AlgorithmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E96B1FA25B0D0075D783 /* AlgorithmsViewController.swift */; };
 		A6F5E96E1FA25B2A0075D783 /* ProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E96D1FA25B2A0075D783 /* ProgrammingViewController.swift */; };
 		A6F5E9701FA25B570075D783 /* InternetMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5E96F1FA25B570075D783 /* InternetMasterViewController.swift */; };
@@ -64,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A637641E2004051F00EDE4BC /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		A63764202004054F00EDE4BC /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
+		A63764232004061100EDE4BC /* bucket.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = bucket.csv; path = ../../../../../Downloads/bucket.csv; sourceTree = "<group>"; };
 		A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -102,7 +106,6 @@
 		A6F5E9551FA257280075D783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6F5E9651FA25A810075D783 /* CreativityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityViewController.swift; sourceTree = "<group>"; };
 		A6F5E9671FA25AB30075D783 /* AbstractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractionViewController.swift; sourceTree = "<group>"; };
-		A6F5E9691FA25AEA0075D783 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		A6F5E96B1FA25B0D0075D783 /* AlgorithmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsViewController.swift; sourceTree = "<group>"; };
 		A6F5E96D1FA25B2A0075D783 /* ProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingViewController.swift; sourceTree = "<group>"; };
 		A6F5E96F1FA25B570075D783 /* InternetMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMasterViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6376422200405C000EDE4BC /* DataView */ = {
+			isa = PBXGroup;
+			children = (
+				A63764202004054F00EDE4BC /* BucketItemCell.swift */,
+				A637641E2004051F00EDE4BC /* DataViewController.swift */,
+			);
+			path = DataView;
+			sourceTree = "<group>";
+		};
 		A6C9FED91FCF3B99009A0110 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,13 +236,13 @@
 				A6F5E9331FA257280075D783 /* AppDelegate.swift */,
 				A6F5E9651FA25A810075D783 /* CreativityViewController.swift */,
 				A6F5E9671FA25AB30075D783 /* AbstractionViewController.swift */,
-				A6F5E9691FA25AEA0075D783 /* DataViewController.swift */,
 				A6F5E96B1FA25B0D0075D783 /* AlgorithmsViewController.swift */,
 				A6F5E96D1FA25B2A0075D783 /* ProgrammingViewController.swift */,
 				A6F5E96F1FA25B570075D783 /* InternetMasterViewController.swift */,
 				A6F5E9711FA25B7D0075D783 /* GlobalImpactViewController.swift */,
 				A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */,
 				A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */,
+				A6376422200405C000EDE4BC /* DataView */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +261,7 @@
 		A6F5E9631FA257720075D783 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A63764232004061100EDE4BC /* bucket.csv */,
 				A6D91E6D1FE1ABE3003D47E9 /* Utilities.swift */,
 				A6D91E671FE1ABA2003D47E9 /* Sounds */,
 				A6F5E93F1FA257280075D783 /* Info.plist */,
@@ -413,7 +426,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F5E9701FA25B570075D783 /* InternetMasterViewController.swift in Sources */,
-				A6F5E96A1FA25AEA0075D783 /* DataViewController.swift in Sources */,
 				A6D91E591FE1AB41003D47E9 /* GameScene.swift in Sources */,
 				A6D91E781FE1AC04003D47E9 /* Invader.swift in Sources */,
 				A6D91E5A1FE1AB41003D47E9 /* LevelCompleteScene.swift in Sources */,
@@ -421,11 +433,13 @@
 				A6F5E96E1FA25B2A0075D783 /* ProgrammingViewController.swift in Sources */,
 				A6E5A39D1FC36028000264AE /* Cat.swift in Sources */,
 				A6D91E771FE1AC04003D47E9 /* PlayerLaser.swift in Sources */,
+				A63764212004055000EDE4BC /* BucketItemCell.swift in Sources */,
 				A6D91E5B1FE1AB41003D47E9 /* StartScene.swift in Sources */,
 				A6D91E761FE1AC04003D47E9 /* Player.swift in Sources */,
 				A6E5A39F1FC3636A000264AE /* birb.swift in Sources */,
 				A6D91E7A1FE1AC04003D47E9 /* Projectile.swift in Sources */,
 				A6C9FED81FCF39D6009A0110 /* InternetDetailViewController.swift in Sources */,
+				A637641F2004051F00EDE4BC /* DataViewController.swift in Sources */,
 				A6F5E96C1FA25B0D0075D783 /* AlgorithmsViewController.swift in Sources */,
 				A6EF25AA1FD72A8B004C6962 /* DrawingView.swift in Sources */,
 				A6F5E9681FA25AB30075D783 /* AbstractionViewController.swift in Sources */,

@@ -330,21 +330,6 @@
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="-532.0839580209896"/>
         </scene>
-        <!--Data View Controller-->
-        <scene sceneID="qWi-nw-USU">
-            <objects>
-                <viewController id="wIo-LY-vCb" customClass="DataViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mSL-I4-hVP" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="g82-sT-iJm"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VSs-rr-vMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1375.2" y="-522.18890554722645"/>
-        </scene>
         <!--Internet Detail View Controller-->
         <scene sceneID="ySZ-ya-nAf">
             <objects>
@@ -442,6 +427,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdM-Lg-iTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3831.1999999999998" y="-532.0839580209896"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="rcn-xH-zJM">
+            <objects>
+                <tableViewController id="SMI-h7-XMI" customClass="DataViewController" customModule="JeremyS_CSP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eys-3E-672">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataIdentfier" id="oYj-mi-1Ed" customClass="BucketItemCell" customModule="JeremyS_CSP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oYj-mi-1Ed" id="0ia-T1-Hlb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygf-oq-Ud2">
+                                            <rect key="frame" x="50" y="23" width="325" height="20"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Author">
+                                                    <attributes>
+                                                        <font key="NSFont" size="17" name="Times-Italic"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHw-29-SiZ">
+                                            <rect key="frame" x="0.0" y="10" width="42" height="36"/>
+                                            <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="bucket item here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcM-A4-FBW">
+                                            <rect key="frame" x="50" y="0.0" width="325" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wcM-A4-FBW" firstAttribute="leading" secondItem="DHw-29-SiZ" secondAttribute="trailing" constant="20" id="L2c-Sq-XDw"/>
+                                        <constraint firstAttribute="bottom" secondItem="ygf-oq-Ud2" secondAttribute="bottom" constant="20" id="aLb-Yz-wbc"/>
+                                        <constraint firstItem="wcM-A4-FBW" firstAttribute="leading" secondItem="DHw-29-SiZ" secondAttribute="trailing" constant="20" id="vFV-RZ-A3z"/>
+                                        <constraint firstAttribute="bottom" secondItem="ygf-oq-Ud2" secondAttribute="bottom" constant="20" id="x28-C0-UI4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bucketItemSignat" destination="ygf-oq-Ud2" id="s7h-BP-alR"/>
+                                    <outlet property="bucketItemSymbol" destination="DHw-29-SiZ" id="96v-kY-DoC"/>
+                                    <outlet property="bucketItemText" destination="wcM-A4-FBW" id="6mu-0R-tWc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SMI-h7-XMI" id="JDm-C0-K9K"/>
+                            <outlet property="delegate" destination="SMI-h7-XMI" id="xbE-4u-tpD"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORu-JQ-9Ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="-532.98350824587715"/>
         </scene>
         <!--Algorithms View Controller-->
         <scene sceneID="TUH-x9-qmt">
