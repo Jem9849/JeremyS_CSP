@@ -12,14 +12,15 @@ class BucketItemCell: UITableViewCell {
     
     @IBOutlet weak var bucketItemText : UILabel!
     @IBOutlet weak var bucketItemSymbol : UILabel!
-    @IBOutlet weak var bucketItemSignat : UILabel!
-
+    @IBOutlet weak var bucketItemSignature : UILabel!
+    
     var bucketItem : BucketItem!
     {
         didSet
         {
             updateCellView()
         }
+
     }
     
     private func randomEmoji() -> String
@@ -47,17 +48,17 @@ class BucketItemCell: UITableViewCell {
         }
         else
         {
-            bucketItemSignure.text = "author goes here"
+            bucketItemSignature.text = "author goes here"
             bucketItemText.text = "text goes here"
         }
-        bucketItemSymbol.text = randomEmojiSymbol()
+        bucketItemSymbol.text = randomEmoji()
     }
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    public override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A637641F2004051F00EDE4BC /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A637641E2004051F00EDE4BC /* DataViewController.swift */; };
 		A63764212004055000EDE4BC /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63764202004054F00EDE4BC /* BucketItemCell.swift */; };
+		A63764252004106700EDE4BC /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63764242004106700EDE4BC /* BucketItem.swift */; };
+		A637642820041A7B00EDE4BC /* bucket.csv in Resources */ = {isa = PBXBuildFile; fileRef = A637642720041A7B00EDE4BC /* bucket.csv */; };
 		A664DE8B1FD9D36E00B8FDD1 /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */; };
 		A6C9FED81FCF39D6009A0110 /* InternetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */; };
 		A6C9FEDB1FCF3B99009A0110 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */; };
@@ -67,7 +69,8 @@
 /* Begin PBXFileReference section */
 		A637641E2004051F00EDE4BC /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		A63764202004054F00EDE4BC /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
-		A63764232004061100EDE4BC /* bucket.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = bucket.csv; path = ../../../../../Downloads/bucket.csv; sourceTree = "<group>"; };
+		A63764242004106700EDE4BC /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
+		A637642720041A7B00EDE4BC /* bucket.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bucket.csv; path = ../../../../../Downloads/bucket.csv; sourceTree = "<group>"; };
 		A664DE8A1FD9D36E00B8FDD1 /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		A6C9FED71FCF39D6009A0110 /* InternetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetDetailViewController.swift; sourceTree = "<group>"; };
 		A6C9FEDA1FCF3B99009A0110 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -261,7 +264,7 @@
 		A6F5E9631FA257720075D783 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A63764232004061100EDE4BC /* bucket.csv */,
+				A637642720041A7B00EDE4BC /* bucket.csv */,
 				A6D91E6D1FE1ABE3003D47E9 /* Utilities.swift */,
 				A6D91E671FE1ABA2003D47E9 /* Sounds */,
 				A6F5E93F1FA257280075D783 /* Info.plist */,
@@ -273,6 +276,7 @@
 		A6F5E9641FA257A00075D783 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A63764242004106700EDE4BC /* BucketItem.swift */,
 				A6D91E731FE1AC04003D47E9 /* Invader.swift */,
 				A6D91E741FE1AC04003D47E9 /* InvaderLaser.swift */,
 				A6D91E711FE1AC04003D47E9 /* Player.swift */,
@@ -394,6 +398,7 @@
 			files = (
 				A6D91E691FE1ABD1003D47E9 /* extra sound.mp3 in Resources */,
 				A6D91E681FE1ABD1003D47E9 /* boss sound.mp3 in Resources */,
+				A637642820041A7B00EDE4BC /* bucket.csv in Resources */,
 				A6D91E6C1FE1ABD1003D47E9 /* powerup sound.mp3 in Resources */,
 				A6F5E93E1FA257280075D783 /* LaunchScreen.storyboard in Resources */,
 				A6F5E93B1FA257280075D783 /* Assets.xcassets in Resources */,
@@ -441,6 +446,7 @@
 				A6C9FED81FCF39D6009A0110 /* InternetDetailViewController.swift in Sources */,
 				A637641F2004051F00EDE4BC /* DataViewController.swift in Sources */,
 				A6F5E96C1FA25B0D0075D783 /* AlgorithmsViewController.swift in Sources */,
+				A63764252004106700EDE4BC /* BucketItem.swift in Sources */,
 				A6EF25AA1FD72A8B004C6962 /* DrawingView.swift in Sources */,
 				A6F5E9681FA25AB30075D783 /* AbstractionViewController.swift in Sources */,
 				A6D91E6E1FE1ABE3003D47E9 /* Utilities.swift in Sources */,

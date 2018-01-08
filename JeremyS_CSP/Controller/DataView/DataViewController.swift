@@ -23,7 +23,7 @@ class DataViewController : UITableViewController {
             do
             {
                 let input = try String(contentsOf: filePath)
-                let bucketLines = input.components(seperatedBy: "\n")
+                let bucketLines = input.components(separatedBy: "\n")
                 for line in bucketLines
                 {
                     let item = line.components(separatedBy:",")
@@ -41,7 +41,25 @@ class DataViewController : UITableViewController {
     
     //MARK: TableView code
     
-    override public func 
+    override public func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    
+    override public func tableView(_ tableview: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return bucketList.count
+    }
+    
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let currentCell = tableView.dequeueReusableCell(withIdentifier: "dataIdentifier", for: indexPath) as! BucketItemCell
+        
+        currentCell.bucketItem = bucketList[indexPath.row]
+        // currentCell.bucketItemSignature.text = currentCell.bucketItem.itemAuthor
+        
+        return currentCell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,22 +71,17 @@ class DataViewController : UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    //override public func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+     //   return 0
+   // }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   // override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+     //   return 0
+   // }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

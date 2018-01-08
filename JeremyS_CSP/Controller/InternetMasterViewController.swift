@@ -30,6 +30,7 @@ public class InternetMasterViewController: UITableViewController
     private func setup() -> Void
     {
         addresses = [
+            "https://www.cnn.com",
             "https://apstudent.collegeboard.org/apcourse/ap-computer-science-principles",
             "http://www.canyonsdistrict.org/",
             "https://ctec.canyonsdistrict.org/",
@@ -58,6 +59,11 @@ public class InternetMasterViewController: UITableViewController
     override public func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
+    }
+    
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return internetTopics.count
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -107,20 +113,6 @@ public class InternetMasterViewController: UITableViewController
         }
     }
 
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
