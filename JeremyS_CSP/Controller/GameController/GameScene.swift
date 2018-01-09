@@ -14,9 +14,9 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
 {
     //MARK: Invader Data
     let rowsOfInvaders : Int = 4
-    var invaderSpeed : Double = 23.434365735465754546
+    var invaderSpeed : Double = 30
     var invadersThatCanFire : [Invader] = []
-    var invaderCount = 0
+    //var invaderCount = 0
     
     
     
@@ -36,16 +36,16 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     private func setupInvaders() -> Void
     {
         let numberOfInvaders = gameLevel * 2 + 1
-        invaderCount = numberOfInvaders
+       // invaderCount = numberOfInvaders
         for invaderRow in 0 ..< numberOfInvaders
         {
             for invaderCol in 0 ..< numberOfInvaders
             {
                 let currentInvader :Invader = Invader()
                 let halfWidth : CGFloat = currentInvader.size.width / 2
-                let xPosition : CGFloat = size.width - halfWidth - (CGFloat(numberOfInvaders) * currentInvader.size.width) + 10
+                let xPosition : CGFloat = size.width - halfWidth - (CGFloat(numberOfInvaders) * currentInvader.size.width)
                 
-                currentInvader.position = CGPoint(x: xPosition + (currentInvader.size.width + CGFloat(10)) * CGFloat(invaderCol - 1), y: CGFloat(self.size.height - CGFloat(invaderRow) * 46))
+                currentInvader.position = CGPoint(x: xPosition + CGFloat(80) + (currentInvader.size.width + CGFloat(10)) * CGFloat(invaderCol - 1), y: CGFloat(self.size.height - CGFloat(invaderRow) * 46))
                 currentInvader.invaderRow = invaderRow
                 currentInvader.invaderCol = invaderCol
                 
@@ -56,14 +56,12 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
                 }
             }
         }
-        
-        
     }
     
     private func setupPlayer() -> Void
     {
         //Frame or bounds
-        player.position = CGPoint(x:self.frame.midX, y:player.size.height/2 + 10)
+        player.position = CGPoint(x:self.frame.midX, y:player.size.height / 2 + 10)
         addChild(player)
     }
     
@@ -126,7 +124,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             randomInvader.fireBullet(scene: self)
         }
         
-        print("fire count \(invadersThatCanFire.count)")
+        //print("fire count \(invadersThatCanFire.count)")
     }
     func newGame() -> Void
     {
@@ -167,13 +165,14 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
         starField?.position = CGPoint(x: size.width / 2, y: size.height / 2)
         starField?.zPosition = -1000
         addChild(starField!)
-        
+        // ?
         backgroundColor = UIColor(red:0.28, green:0.23, blue:0.23, alpha:1.0)
         rightBounds = self.size.width - 30
         setupInvaders()
         setupPlayer()
         invokeInvaderFire()
         setupAccelerometer()
+        // ?
         
     }
     
@@ -193,15 +192,15 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     }
     
     //MARK:- Handle Motion
-    func setupAccelerometer() -> Void
+    func setupAccelerometer() //-> Void
     {
         motionManager.accelerometerUpdateInterval = 0.2
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler:
             {
                 (accelerometerData: CMAccelerometerData?, error: Error?)
                 in
-                let acceleration = accelerometerData!.acceleration
-                self.accelerationX = CGFloat(acceleration.x)
+                    let acceleration = accelerometerData!.acceleration
+                    self.accelerationX = CGFloat(acceleration.x)
         } )
     }
     
