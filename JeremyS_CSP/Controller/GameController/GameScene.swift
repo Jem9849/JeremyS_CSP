@@ -126,7 +126,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
             randomInvader.fireBullet(scene: self)
         }
         
-
+        print("fire count \(invadersThatCanFire.count)")
     }
     func newGame() -> Void
     {
@@ -157,8 +157,6 @@ public class GameScene: SKScene, SKPhysicsContactDelegate
     
     override public func didMove(to view: SKView) -> Void
     {
-       
-        
         
         self.physicsWorld.gravity = CGVector(dx:0, dy:0)
         self.physicsWorld.contactDelegate = self
